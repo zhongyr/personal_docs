@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
@@ -7,7 +8,49 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <style>
+    /* 以下是侧边栏(自定义) */
+    aside.sidebar ul li {
+      margin: 0;
+      position: relative;
+    }
+
+    aside.sidebar ul li ul {
+      margin: 6px 0;
+    }
+
+    aside.sidebar ul li p {
+      padding-left: 22px;
+      font-size: 18px;
+      font-weight: normal;
+    }
+
+    aside.sidebar ul li a {
+      line-height: 35px;
+      font-size: 18px;
+      /* 导航栏字体大小 */
+      padding: 3px 0 3px 22px;
+    }
+
+    aside.sidebar ul li.active>a {
+      font-size: 24px !important;
+    }
+
+    aside.sidebar ul li.active>a:before {
+      content: '' !important;
+      position: absolute !important;
+      margin: 0 !important;
+      width: 10px !important;
+      height: 10px !important;
+      top: 15px !important;
+      left: 0px !important;
+      border-radius: 50% !important;
+      background-color: #fed24a !important;
+      box-shadow: 0 0 0 3px rgba(254, 210, 74, 0.4) !important;
+    }
+  </style>
 </head>
+
 <body>
   <div id="app"></div>
   <script>
@@ -17,16 +60,16 @@
       loadNavbar: true,
       loadSidebar: true,
       alias: {
-        '/*/_sidebar.md':'/_sidebar.md'
+        '/*/_sidebar.md': '/_sidebar.md'
       }
     }
   </script>
   <!-- Docsify v4 -->
-  
+
   <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
-  <script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-rust.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.js"></script>
   <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-toml.js"></script>
 </body>
+
 </html>
