@@ -49,7 +49,11 @@ int av_opt_set_dict_val(void *obj, const char *name, const AVDictionary *val, in
 这是Linux Kernel中结构体内资源管理的一个例子，需要额外调用函数释放结构体中的资源。而在rust中，编译器会要求提前声明清楚资源的ownership来保证
 资源能够在合适的时机被释放。
 
+<<<<<<< HEAD
 ##　Compile time vs run time
+=======
+## Compile time vs run time
+>>>>>>> 9eca430511b21c1d0896ae152343037eda81953f
 
 在rust中，所有的这种ownership的管理都是要求在编译时确定的，用以保证运行时的正确。
 
